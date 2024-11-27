@@ -7,8 +7,8 @@ body, h1, ul, li, a {
 
 body {
   font-family: 'Roboto Condensed', Arial, sans-serif; /* Updated font-family */
-  background-color: #f8f9fa;
-  color: #333;
+  background-color: #414141; /* Updated to match navbar color */
+  color: #ffffff; /* Set text color to white for better readability on dark background */
   padding: 0;
   margin: 0;
 }
@@ -32,41 +32,214 @@ body {
 .masthead h1 {
   font-size: 4rem; /* Increased font size for h1 */
   margin-bottom: 10px; /* Adds a gap between h1 and h2 */
+  text-shadow: 2px 2px 5px #31D0AA; /* Adds a turquoise shadow to "SODA" */
 }
 
 .masthead h2 {
   font-size: 2.5rem; /* Font size for h2, smaller than h1 */
   margin-top: 0; /* Ensure no extra margin on top */
+  text-shadow: 2px 2px 5px #31D0AA; /* Adds a turquoise shadow to "SODA" */
 }
 
-.nav {
-  width: 90%;
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 80px; /* Increased height for a more prominent navbar */
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #414141; /* Dark gray background for the navbar */
+  color: white;
+  position: relative;
+  border-bottom-left-radius: 20px; /* Rounded corners on the bottom left */
+  border-bottom-right-radius: 20px; /* Rounded corners on the bottom right */
+  box-shadow: 0 8px 15px #31D0AA; /* Creates a shadow underneath to give a pop-out effect */
+  z-index: 10; /* Ensures the navbar stays above other elements */
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  height: 150px; /* Adjust the logo size as needed */
+}
+
+.nav-links {
+  display: flex;
+  padding-right: 30px;
+  margin-left: 50px; /* Move links more to the left */
+  gap: 20px; /* Creates space between navigation links */
+  margin-left: auto; /* Push links to the right side */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #31D0AA; /* Change link color on hover */
+}
+
+/* Login Box Styling */
+.login-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Login Box Styling */
+.login-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px #31D0AA; /* Adds turquoise shadow all around the box */
+  max-width: 400px;
+  width: 100%;
+}
+
+
+.login-title {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.login-box label {
+  display: block;
+  margin-bottom: 8px;
+  color: #414141;
+  font-weight: 700;
+}
+
+.login-box input {
+  width: 80%; /* Adjust the percentage to make the input boxes smaller */
+  max-width: 300px; /* Add a max-width for further control */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  padding-right: 40px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #31D0AA;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #28a08c;
+}
+
+
+/* Side Navigation Styling */
+.side-navigation {
+  width: 20%;
   max-width: 300px;
+  min-width: 200px;
+  background-color: #414141;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  top: 120px; /* Moves the side navigation bar further down */
+  left: 0;
+  padding-top: 20px;
+  transition: transform 0.3s ease;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 35px 45px #31D0AA; /* Turquoise shadow to match the original navigation bar */
+}
+.side-toggle {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #414141;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.nav ul {
+.side-bar-menu ul {
   list-style: none;
   padding: 0;
+  
+}
+.side-bar-menu li {
+  padding-top: 30px;
+  margin-bottom: 40px; /* Increase space below each item for better spacing */
+  text-align: center; /* Center the text inside each list item */
 }
 
-.nav li {
-  margin: 10px 0;
+.side-menu li {
+  margin: 60px 0;
 }
 
-.nav a {
-  display: block;
+.side-menu a {
   text-decoration: none;
-  background-color: #ffffff;
-  color: #c912f6;
-  padding: 15px;
-  border: 3px solid purple; /* Adds a purple border outline */
-  border-radius: 15px;
+  color: white;
+  font-size: 1.2rem;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s;
   text-align: center;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-.nav a:hover {
-  background-color: #E6E6FA; /* Light lavender background */
-  color: #4B0082; /* Darker purple text */
-  border-color: #4b0082; /* Changes the border to a darker shade of purple on hover */
+.side-menu a:hover {
+  background-color: #31D0AA;
+}
+
+.side-menu.open {
+  transform: translateX(0);
+}
+
+.side-bar-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.side-bar-menu a:hover {
+  color: #31D0AA; /* Change link color on hover */
+}
+
+/* Main Content Styling */
+.content {
+  margin-left: 20%;
+  padding: 40px;
+  width: 80%;
+  transition: margin-left 0.3s ease;
+}
+
+/* Responsive Styles for Smaller Devices */
+@media (max-width: 768px) {
+  .left-navigation {
+      transform: translateX(-100%);
+  }
+
+  .toggle-nav {
+      display: block;
+  }
+
+  .side-menu.open {
+      transform: translateX(0);
+  }
+
+  .content {
+      margin-left: 0;
+  }
 }
