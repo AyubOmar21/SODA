@@ -20,9 +20,9 @@
         </nav>
     </header>
 
+    <button class="side-toggle" onclick="toggleNav()">☰</button>   
     <!-- Permanent Left Navigation System -->
     <aside class="side-navigation">
-        <button class="side-toggle" onclick="toggleNav()">☰</button>
         <nav class="side-bar-menu">
             <ul>
                 <li><a href="#section1">Events</a></li>
@@ -31,32 +31,71 @@
                 <li><a href="#section4">Courses</a></li>
             </ul>
         </nav>
-    </aside>    
+    </aside>
+
+    <!-- Overlay Div -->
+    <div class="overlay" id="overlay"></div>
 
     <!-- Main Content -->
     <div class="content">
         <!-- Placeholder for sections -->
         <section id="section1">
-            <h2>Events</h2>
-            <!-- Content for Section 1 -->
+            <h2 id="events-heading">Introduction & tour</h2>
+                <div class="video-container">
+                    <!-- Video 1 -->
+                    <div class="video-card">
+                        <iframe 
+                            src="https://www.youtube.com/embed/tc25JXCeBqY" 
+                            frameborder="0" allowfullscreen>
+                        </iframe>
+                        <h3 class="video-title">Video Title 1</h3>
+                    </div>
+                
+                    <!-- Video 2 -->
+                    <div class="video-card">
+                        <iframe 
+                            src="https://www.youtube.com/embed/PKHRvi4bNdM&t=3s" 
+                            frameborder="0" allowfullscreen>
+                        </iframe>
+                        <h3 class="video-title">Building tour</h3>
+                    </div>
+                
+                    <!-- Video 3 -->
+                    <div class="video-card">
+                        <iframe 
+                            src="https://www.youtube.com/embed/watch?v=5e-X6MGfoZ4" 
+                            frameborder="0" allowfullscreen>
+                        </iframe>
+                        <h3 class="video-title">Video Title 3</h3>
+                    </div>
+                </
+            
+                <!-- Add more videos here -->
+            </div>
+            
         </section>
 
         <section id="section2">
-            <h2>News</h2>
-            <!-- Content for Section 2 -->
+            <h2 id="news-heading">News</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro!</p>
         </section>
 
         <section id="section3">
-            <h2>Equipments</h2>
-            <!-- Content for Section 3 -->
+            <h2 id="equipments-heading">Equipments</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro!</p>
         </section>
 
         <section id="section4">
-            <h2>Courses</h2>
-            <!-- Content for Section 3 -->
+            <h2 id="courses-heading">Courses</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magnam, placeat, quas consequuntur repellendus esse ea ducimus pariatur doloribus impedit iusto magni facilis corrupti totam delectus ex facere. Consequatur, porro!</p>
         </section>
     </div>
 
-    <script src="script.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
 </html>
+
+
