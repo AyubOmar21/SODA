@@ -1,88 +1,95 @@
+/* ==================== Global Styles and Reset Rules ==================== */
+
+/* Reset Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+
+/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* General Reset */
-body, h1, ul, li, a {
-
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Body Styles */
 body {
-  font-family: 'Roboto Condensed', Arial, sans-serif; /* Updated font-family */
-  background-color: #0E1E16; /* Updated to match navbar color */
-  color: #ffffff; /* Set text color to white for better readability on dark background */
-  padding: 0;
-  margin: 0;
+  font-family: 'Roboto Condensed', Arial, sans-serif; /* Consistent font family */
+  background-color: #0E1E16; /* Matches the navbar background */
+  color: #ffffff; /* White text for better readability */
+}
+
+/* Headings and Links */
+h1, h2, h3, ul, li, a {
+  margin: 0; /* Reset margin for headings, lists, and links */
+  padding: 0; /* Reset padding */
 }
 
 
 
-
-
-
-
-
+/* ==================== Masthead Styles ==================== */
 .masthead {
-  width: 100%; /* Full width */
-  height: 100vh; /* Full height of the viewport */
-  background-image:
-  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
-  url('../images/soda14.jpeg'); /* Correct relative path to your image */
-  background-size: cover; /* Ensures the image covers the entire masthead */
-  background-position: center; /* Centers the image */
-  color: white; /* Keeps text contrasting */
-  display: flex; /* Flexbox for centering content */
-  justify-content: center; /* Horizontally center content */
-  align-items: center; /* Vertically center content */
-  text-align: center; /* Center text alignment */
-  flex-direction: column; /* Stack h1 and h2 vertically */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), 
+    url('../images/soda14.jpeg'); /* Background gradient + image */
+  background-size: cover; /* Cover entire section */
+  background-position: center; /* Center image alignment */
+  color: #ffffff; /* White text for contrast */
+  display: flex; /* Use Flexbox for centering */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  text-align: center; /* Align text */
 }
 
 .masthead h1 {
-  font-size: 4rem; /* Increased font size for h1 */
-  margin-bottom: 10px; /* Adds a gap between h1 and h2 */
-  text-shadow: 2px 2px 5px #0F2922; /* Adds a turquoise shadow to "SODA" */
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 10px; /* Space between h1 and h2 */
+  text-shadow: 2px 2px 5px #0F2922; /* Subtle turquoise shadow */
+  
 }
 
 .masthead h2 {
-  font-size: 2.5rem; /* Font size for h2, smaller than h1 */
-  margin-top: 0; /* Ensure no extra margin on top */
-  text-shadow: 2px 2px 5px #0F2922; /* Adds a turquoise shadow to "SODA" */
+  font-size: 2.5rem; /* Smaller than h1 */
+  margin-top: 0; /* Remove top margin */
+  text-shadow: 2px 2px 5px #0F2922; /* Consistent shadow with h1 */
 }
 
 
 
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
-.logo img {
-  height: 150px; /* Adjust the logo size as needed */
-}
+/* ==================== Login Styles ==================== */
 
 
-
-/* Login Box Styling */
+/* Login Container */
 .login-container {
   margin-top: 20px;
+  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Login Box Styling */
+/* Login Box */
 .login-box {
   background-color: #ffffff;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 8px 15px #31D0AA; /* Adds turquoise shadow all around the box */
-  max-width: 400px;
-  width: 100%;
+  max-width: 800px; /* Increase the max-width to make it wider */
+  width: 110%; /* Adjust width for responsiveness */
+}
+.forgot-password {
+  margin-left: auto; /* Push the link to the right */
+  margin-right: 24px; /* Add space between the link and the edge */
+  text-align: right; /* Align text within the link to the right */
+  color: #31D0AA;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 
@@ -111,16 +118,18 @@ body {
 }
 
 .login-box button {
-  width: 100%;
-  padding: 10px;
+  width: 40%; /* Reduce the width percentage */
+  padding: 8px; /* Adjust padding for a smaller button */
+  transform: translateX(-30px); /* Moves the button 20px to the right */
   background-color: #31D0AA;
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Adjust font size if necessary */
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 
 .login-box button:hover {
   background-color: #28a08c;
@@ -142,6 +151,163 @@ body {
   transform: scale(1.1); /* Enlarge the container slightly more */
   
 }
+
+.login-button:hover {
+  background-color: #28b394;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-button:focus {
+  outline: 2px solid #31D0AA;
+  outline-offset: 2px;
+}
+
+
+.login-container {
+  padding-bottom: 100px;
+}
+.forgot-password {
+  font-size: 1rem;
+  color: #31D0AA;
+  text-decoration: none;
+  width: 40%;
+  text-align: left;
+}
+
+
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+
+
+/* ==================== Navbar Styles ==================== */
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #0F2922; /* Dark green background for contrast */
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  color: #ffffff; /* White links for readability */
+  font-weight: 500; /* Slightly bold links for emphasis */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #47ceaa; /* Highlighted green on hover */
+}
+
+/* Logo Styling */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Center the logo horizontally */
+}
+
+.logo img {
+  height: 150px; /* Adjust logo height */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Toggler Button */
+.navbar-toggler {
+  background-color: #ffffff; /* White button for visibility */
+  border: none; /* Remove default border */
+}
+
+.navbar-toggler-icon {
+  filter: invert(1); /* Ensure visibility on dark background */
+}
+
+
+/* ==================== Carousel Styles ==================== */
+
+/* General Carousel Styling */
+.carousel {
+  margin: 0 auto; /* Center the carousel */
+  max-width: 100%; /* Restrict width */
+  padding: 20px; /* Add inner spacing */
+}
+
+.carousel-inner {
+  display: flex; /* Ensure items align properly */
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.carousel-inner .col {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+}
+
+.carousel-inner .col:hover {
+  transform: scale(1.1); /* Slight enlargement on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* Carousel Images */
+.carousel-inner .col img {
+  width: 100%; /* Ensure images scale correctly */
+  height: auto; /* Maintain aspect ratio */
+  transition: none; /* Prevent independent hover animation */
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 30%; /* Adjust control position */
+  color: #ffffff; /* Ensure controls are visible */
+}
+
+/* Netflix Carousel (Specific Layouts) */
+#netflixCarousel .col {
+  flex: 0 0 25%; /* Each image takes 25% width on desktop */
+  max-width: 25%;
+}
+
+/* ==================== Responsive Carousel Styles ==================== */
+
+/* Tablet (3 images per row) */
+@media (max-width: 992px) {
+  #netflixCarousel .col {
+    flex: 0 0 33.333%; /* Each image takes 33.33% width */
+    max-width: 33.333%;
+  }
+}
+
+/* Phone (2 images per row) */
+@media (max-width: 576px) {
+  #netflixCarousel .col {
+    flex: 0 0 50%; /* Each image takes 50% width */
+    max-width: 50%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Sticky Wrapper for Video */
 .sticky-wrapper {
@@ -173,136 +339,62 @@ body {
 }
 
 
-/* Add space around the carousels */
-.carousel {
-  margin: 0 auto; /* Center the carousel */
-  max-width: 100%; /* Restrict width to 90% of the page */
-  padding: 20px; /* Add inner spacing */
-}
-/* Ensure the image inside the container doesn't scale */
-.carousel-inner .col img {
-  transform: none; /* Prevent the image from scaling independently */
-  transition: none; /* Remove hover animation from the image itself */
-}
-
-
-/* Move carousel control buttons down */
-.carousel-control-prev,
-.carousel-control-next {
-    top: 30%; /* Adjust this percentage to move the buttons further down */
-}
-
-/* Tablet (3 images per row) */
-@media (max-width: 992px) {
-  #netflixCarousel .col {
-      flex: 0 0 33.333%; /* Each image takes 33.33% of the row */
-      max-width: 33.333%;
-  }
-}
-
-/* Phone (2 images per row) */
-@media (max-width: 576px) {
-  #netflixCarousel .col {
-      flex: 0 0 50%; /* Each image takes 50% of the row */
-      max-width: 50%;
-  }
-}
 
 
 
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background-color: #0F2922;
-}
 
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
+/* ==================== Video Section Styles ==================== */
 
-.nav-links {
-  flex-grow: 1;
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-}
-
-
-
-/* Video Container Styling */
+/* Video Container */
 .video-container {
-  display: grid;
+  display: grid; /* Use grid layout for videos */
   grid-template-columns: repeat(3, 1fr); /* Default: 3 videos per row */
   gap: 20px; /* Space between videos */
-  margin: 20px;
+  margin: 20px; /* Add spacing around the section */
 }
 
-/* Video Card Styling */
+/* Video Card */
 .video-card {
-  background-color: #fff; /* Optional background */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s ease;
+  background-color: #ffffff; /* Optional background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  overflow: hidden; /* Ensure content stays inside the card */
+  text-align: center; /* Center-align content */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
 .video-card iframe {
-  width: 100%;
-  height: 200px; /* Fixed height for the video player */
-  display: block;
+  width: 100%; /* Make the video responsive */
+  height: 200px; /* Fixed height for video players */
+  display: block; /* Prevent inline-block spacing issues */
 }
 
+/* Video Title */
 .video-title {
   font-size: 1rem;
-  margin: 10px 0;
+  margin: 10px 0; /* Space around the title */
   color: #333; /* Dark text for visibility */
 }
 
 /* Hover Effect */
 .video-card:hover {
   transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 
-/* Responsive Styles */
+/* ==================== Responsive Video Section ==================== */
+
+/* Tablet (2 videos per row) */
 @media (max-width: 1024px) {
   .video-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 videos per row for tablets */
+    grid-template-columns: repeat(2, 1fr); /* Reduce to 2 videos per row */
   }
 }
 
-
-/* Responsive Styles for Smaller Devices */
+/* Phone (1 video per row) */
 @media (max-width: 768px) {
-  .logo {
-    position: relative;
-    left: 0;
-    padding-left: 60px;
-    transform: none;
-  }
-  .logo img {
-    width: 100px;
-    height: 100px;
-  }
-  .side-toggle {
-    display: block; /* Show the toggle button on small screens */
-    padding-top: 15px;
-  }
-
-  .side-navigation {
-    left: -300px; /* Hide the navigation initially */
-    transition: left 0.3s ease; /* Smooth transition for sliding in/out */
-  }
-
-  .content {
-    margin-left: 0; /* No margin when sidebar is hidden */
-  }
   .video-container {
-    grid-template-columns: 1fr; /* 1 video per row for phones */
-}
+    grid-template-columns: 1fr; /* Single-column layout */
+  }
 }
